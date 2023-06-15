@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <script defer src="main.js"></script>
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+  <body>
+    <main>
+      <img src="./images/logo.svg" alt="Ping logo" id="ping-logo" />
+      <h1>We are launching <span class="bold">soon!</span></h1>
+      <p id="subscribe">Subscribe and get notified</p>
+      <form action="/" id="email-form">
+        <div class="input-wrapper">
+          <input
+            aria-label="Enter your email"
+            type="text"
+            id="email"
+            placeholder="Your email address..."
+          />
+          <p id="error-msg"></p>
+        </div>
+        <input type="submit" value="Notify Me" id="submit-button" />
+      </form>
+      <img
+        id="illustration"
+        src="./images/illustration-dashboard.png"
+        alt="An image of a generic website showing some statistics"
+      />
+    </main>
+    <footer>
+      <div id="socials">
+        <div class="logo-circle">
+          <i class="fa-brands fa-facebook-f socials-logo"></i>
+        </div>
+        <div class="logo-circle">
+          <i class="fa-brands fa-twitter socials-logo"></i>
+        </div>
+        <div class="logo-circle">
+          <i class="fa-brands fa-instagram socials-logo"></i>
+        </div>
+      </div>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

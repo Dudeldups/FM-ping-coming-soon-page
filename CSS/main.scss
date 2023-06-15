@@ -1,0 +1,140 @@
+@use "resets.scss";
+@use "colors.scss";
+
+body {
+  font: 1.25rem "Libre Franklin", sans-serif;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 40em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ping-logo {
+  margin-top: 4rem;
+}
+
+h1 {
+  margin-top: 3rem;
+  color: colors.$gray;
+  font-size: 2.125rem;
+}
+
+#subscribe {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.bold {
+  font-weight: 700;
+  color: black;
+}
+
+#email-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 90%;
+  display: grid;
+
+  input {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+  }
+}
+
+#email {
+  font-size: 1.25rem;
+  border: 1px solid colors.$gray;
+
+  &::placeholder {
+    opacity: 0.75;
+  }
+
+  &:focus {
+    outline-color: colors.$orange;
+  }
+
+  &.error {
+    border: 2px solid colors.$light-red;
+  }
+
+  &.valid {
+    border: 2px solid colors.$green;
+  }
+}
+
+#error-msg {
+  display: none;
+  margin: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  color: colors.$light-red;
+}
+
+#submit-button {
+  border: none;
+  background-color: colors.$blue;
+  color: white;
+  box-shadow: 0 10px 10px rgba(colors.$pale-blue, 0.35);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+#illustration {
+  margin-top: 3rem;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+
+  #socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .logo-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1.5px solid colors.$pale-blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: colors.$blue;
+
+      .socials-logo {
+        color: white;
+      }
+    }
+  }
+
+  .socials-logo {
+    color: colors.$blue;
+  }
+
+  p {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: colors.$gray;
+  }
+}
+
+// @media only screen and (min-width: 50em) {
+// }

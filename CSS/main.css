@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font: 1.25rem "Libre Franklin", sans-serif;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 40em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ping-logo {
+  margin-top: 4rem;
+}
+
+h1 {
+  margin-top: 3rem;
+  color: hsl(0, 0%, 59%);
+  font-size: 2.125rem;
+}
+
+#subscribe {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.bold {
+  font-weight: 700;
+  color: black;
+}
+
+#email-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 90%;
+  display: grid;
+}
+#email-form input {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+}
+
+#email {
+  font-size: 1.25rem;
+  border: 1px solid hsl(0, 0%, 59%);
+}
+#email::-moz-placeholder {
+  opacity: 0.75;
+}
+#email::placeholder {
+  opacity: 0.75;
+}
+#email:focus {
+  outline-color: hsl(45, 100%, 50%);
+}
+#email.error {
+  border: 2px solid hsl(354, 100%, 66%);
+}
+#email.valid {
+  border: 2px solid hsl(100, 80%, 45%);
+}
+
+#error-msg {
+  display: none;
+  margin: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  color: hsl(354, 100%, 66%);
+}
+
+#submit-button {
+  border: none;
+  background-color: hsl(223, 87%, 63%);
+  color: white;
+  box-shadow: 0 10px 10px rgba(194, 211, 255, 0.35);
+  cursor: pointer;
+}
+#submit-button:hover {
+  opacity: 0.85;
+}
+
+#illustration {
+  margin-top: 3rem;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+}
+footer #socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+footer .logo-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1.5px solid hsl(223, 100%, 88%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+footer .logo-circle:hover {
+  background-color: hsl(223, 87%, 63%);
+}
+footer .logo-circle:hover .socials-logo {
+  color: white;
+}
+footer .socials-logo {
+  color: hsl(223, 87%, 63%);
+}
+footer p {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: hsl(0, 0%, 59%);
+}/*# sourceMappingURL=main.css.map */
