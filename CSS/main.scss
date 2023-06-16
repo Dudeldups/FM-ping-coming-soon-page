@@ -22,7 +22,7 @@ main {
 h1 {
   margin-top: 3rem;
   color: colors.$gray;
-  font-size: 2.125rem;
+  font-size: clamp(2.125rem, 1.0865rem + 4.6154vw, 3.25rem);
 }
 
 #subscribe {
@@ -38,9 +38,8 @@ h1 {
 #email-form {
   display: grid;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   width: 90%;
-  display: grid;
 
   input {
     width: 100%;
@@ -72,8 +71,8 @@ h1 {
 
 #error-msg {
   display: none;
-  margin: 0.5rem 1rem;
-  font-size: 1rem;
+  padding: 0 1.25rem 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   font-style: italic;
   text-align: center;
@@ -93,7 +92,7 @@ h1 {
 }
 
 #illustration {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 footer {
@@ -114,6 +113,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     cursor: pointer;
 
     &:hover {
@@ -130,11 +130,41 @@ footer {
   }
 
   p {
-    margin-top: 2rem;
+    margin: 2rem 0;
     font-size: 1rem;
     color: colors.$gray;
   }
 }
 
-// @media only screen and (min-width: 50em) {
-// }
+@media only screen and (min-width: 45em) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    max-height: 100vh;
+  }
+
+  #email-form {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  #email {
+    flex: 3;
+  }
+
+  #submit-button {
+    flex: 1;
+  }
+
+  #error-msg {
+    text-align: left;
+    position: absolute;
+    top: 4.25rem;
+  }
+}

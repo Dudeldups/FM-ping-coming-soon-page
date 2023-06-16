@@ -1,17 +1,25 @@
-const formEl = document.querySelector("#email-form");
-const emailEl = document.querySelector("#email");
-const errorEl = document.querySelector("#error-msg");
+const [formElement, emailInput, errorElement] = document.querySelectorAll(
+  "#email-form, #email, #error-msg"
+);
 
-formEl.addEventListener("submit", e => {
+formElement.addEventListener("submit", e => {
   e.preventDefault();
 
-  if (!isEmail(emailEl.value.trim())) {
-    emailEl.className = "error";
-    errorEl.innerText = "Please provide a valid email address";
-    errorEl.style.display = "block";
+  const input = emailInput.value.trim();
+
+  if (input === "") {
+    setError("Whoops! It looks like you forgot to add your email");
+  } else if (!isEmail(input)) {
+    setError("Please provide a valid email address");
   } else {
-    emailEl.className = "valid";
-    errorEl.style.display = "none";
+    emailInput.className = "valid";
+    errorElement.style.display = "none";
+  }
+
+  function setError(message) {
+    emailInput.className = "error";
+    errorElement.innerText = message;
+    errorElement.style.display = "block";
   }
 
   function isEmail(email) {
