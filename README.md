@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution on Frontend Mentor](https://your-solution-url.com)
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/htmlscssjs-ping-landing-page-PCU67O9Msj)
 - [Live Site](https://dudeldups.github.io/FM-ping-coming-soon-page/)
 
 ## My process
